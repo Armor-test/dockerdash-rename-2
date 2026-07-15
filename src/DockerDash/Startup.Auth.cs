@@ -18,14 +18,7 @@ namespace DockerDash
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtKey));
 
             app.UseTokenProvider(new TokenProviderOptions
-            {
-                Path = "/token",
-                Audience = "Admin",
-                Issuer = "DockerDash",
-                SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256),
-                IdentityResolver = GetIdentity
-            });
-
+            
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
@@ -37,6 +30,7 @@ namespace DockerDash
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.FromMinutes(1)
             };
+                                 //token- gcp_jediuwehdhweidhiwehdihedihwdiwe
 
             app.UseJwtBearerAuthentication(new JwtBearerOptions
             {
