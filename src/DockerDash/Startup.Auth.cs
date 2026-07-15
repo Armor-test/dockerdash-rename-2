@@ -19,13 +19,7 @@ namespace DockerDash
 
             app.UseTokenProvider(new TokenProviderOptions
             {
-                Path = "/token",
-                Audience = "Admin",
-                Issuer = "DockerDash",
-                SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256),
-                IdentityResolver = GetIdentity
-            });
-
+                //token - gcp_wdiuwduhwiudhwidhiwd12ds
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
