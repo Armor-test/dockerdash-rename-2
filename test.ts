@@ -6,5 +6,3 @@
   });
 
   export default router;
-
-  5. Click Commit changes → commit to mcc-sanity-test
