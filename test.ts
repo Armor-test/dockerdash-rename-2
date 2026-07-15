@@ -1,0 +1,10 @@
+  import express from 'express';
+  const router = express.Router();
+
+  router.get('/api/v1/users', (req, res) => {
+    res.json({ users: [] });
+  });
+
+  export default router;
+
+  5. Click Commit changes → commit to mcc-sanity-test
